@@ -10,8 +10,10 @@ export const servicesModal = () => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
 
-            servicesModal.style.display = 'block';
-            overlay.style.display = 'block';
+            if(e.target.closest('.row')) {
+                servicesModal.style.display = 'block';
+                overlay.style.display = 'block';
+            }
         })
     })
 
