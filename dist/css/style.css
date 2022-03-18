@@ -791,7 +791,7 @@ p.services-image_mobile {
   left: 0;
   opacity: 0;
 }
-.document-inner:hover .document-overlay {
+.sertificate-document:hover .document-overlay {
   opacity: 1;
   transition: opacity 0.3s linear;
   -webkit-transition: opacity 0.3s linear;
@@ -886,6 +886,64 @@ p.services-image_mobile {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
+.text-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.col-sm-4 {
+  width: auto;
+  padding: 0;
+}
+
+a.sertificate-document {
+  display: block;
+}
+
+.bigSert{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 700px;
+  z-index: 5;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+a.bigLink {
+  display: block;
+  position: relative;
+}
+
+span.sert-close{
+  display: block;
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  color: rgba(45, 44, 44, 0.98);
+  opacity: 1;
+  font-size: 20px;
+  line-height: 35px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.bigImage{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 @-webkit-keyframes rotateInUpLeft {
   from {
     -webkit-transform-origin: left bottom;
@@ -1338,6 +1396,15 @@ p.services-image_mobile {
   .offer-utp {
     width: 100%;
   }
+  .bigSert{
+    width: 400px;
+    height: 500px;
+  }
+  span.sert-close{
+    top: -25px;
+    right: -30px;
+  }
+
 }
 @media (max-width: 480px) {
   #header {
