@@ -4,6 +4,8 @@ export const servicesModal = () => {
     const overlay = document.querySelector('.overlay');
     const servicesModalClose = document.querySelector('.services-modal__close');
 
+
+
     modalCall.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
