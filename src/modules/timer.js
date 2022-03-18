@@ -1,10 +1,11 @@
 'use strict';
 
 export const timer = (deadline) => {
-    const timerDays = document.querySelector('.count_1 span');
-    const timerHours = document.querySelector('.count_2 span');
-    const timerMinutes = document.querySelector('.count_3 span');
-    const timersSeconds = document.querySelector('.count_4 span');
+    const timerDays = document.querySelectorAll('.count_1 span');
+    const timerHours = document.querySelectorAll('.count_2 span');
+    const timerMinutes = document.querySelectorAll('.count_3 span');
+    const timersSeconds = document.querySelectorAll('.count_4 span');
+
 
     const getTime = () => {
         let dateStop = new Date(deadline)
@@ -22,15 +23,20 @@ export const timer = (deadline) => {
         let time = getTime();
 
         if(time.timeRemaining <= 0) {
-            timerDays.textContent = '00';
-            timerHours.textContent = '00';
-            timerMinutes.textContent = '00';
-            timersSeconds.textContent = '00';
+            timerDays.forEach(day => day.textContent = '00');
+            timerHours.forEach(hour => hour.textContent = '00');
+            timerMinutes.forEach(minute => minute.textContent = '00');
+            timersSeconds.forEach(second => second.textContent = '00');
         } else {
-            timerDays.textContent = addZerro(time.days);
+            timerDays.forEach(day => day.textContent = addZerro(time.days));
+            timerHours.forEach(hour => hour.textContent = addZerro(time.hours));
+            timerMinutes.forEach(minute => minute.textContent = addZerro(time.minutes));
+            timersSeconds.forEach(second => second.textContent = addZerro(time.seconds));
+
+            /*timerDays.textContent = addZerro(time.days);
             timerHours.textContent = addZerro(time.hours);
             timerMinutes.textContent = addZerro(time.minutes);
-            timersSeconds.textContent = addZerro(time.seconds);
+            timersSeconds.textContent = addZerro(time.seconds);*/
         }
 
         setInterval(function () {
