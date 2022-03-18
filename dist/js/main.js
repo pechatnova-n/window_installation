@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("modal")})();
+(()=>{"use strict";(()=>{const e=document.querySelector(".fancyboxModal");document.querySelector(".header-modal"),document.querySelector(".overlay"),console.log("111"),e.addEventListener("click",(e=>{e.preventDefault(),console.log("modalBtn")}))})()})();
