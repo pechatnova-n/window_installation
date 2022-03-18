@@ -32,11 +32,6 @@ export const timer = (deadline) => {
             timerHours.forEach(hour => hour.textContent = addZerro(time.hours));
             timerMinutes.forEach(minute => minute.textContent = addZerro(time.minutes));
             timersSeconds.forEach(second => second.textContent = addZerro(time.seconds));
-
-            /*timerDays.textContent = addZerro(time.days);
-            timerHours.textContent = addZerro(time.hours);
-            timerMinutes.textContent = addZerro(time.minutes);
-            timersSeconds.textContent = addZerro(time.seconds);*/
         }
 
         setInterval(function () {
