@@ -12,6 +12,7 @@ servicesModal();
 sertificates();
 timer("01 april 2022");
 form({formId: "form1"});
+form({formId: "form2"});
 validation();
 
 

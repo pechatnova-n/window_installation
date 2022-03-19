@@ -10,16 +10,18 @@ export const form = ({formId}) => {
 
 
    const validate = (list) => {
-      let success;
+      let success = true;
 
       list.forEach(item => {
+
          if (item.name === "fio") {
+            item.require = true;
             if (item.value.length < 3) {
                success = false;
             }
          } else if (item.name === "phone") {
-            if (item.value.length > 16 || (item.value.length < 1)) {
-               console.log(`phone ${item.value.length}`)
+            item.require = true;
+            if ((item.value.length < 1) || item.value.length > 16) {
                success = false;
             }
          } else {
@@ -27,7 +29,6 @@ export const form = ({formId}) => {
          }
       })
 
-      console.log(success)
       return success;
    }
 
@@ -38,15 +39,19 @@ export const form = ({formId}) => {
          headers: {
             'Content-type': 'application/json; charset=UTF-8',
          },
-      }).then(response => response.json())
-          .then(data => {
-             console.log(data);
-          })
-          .catch(error => console.log(error))
+      }).then(response => {
+         if(response.status !== 404) {
+            return response.json();
+         } else {
+            console.log("Ошибка отправки");
+         }
+      }).catch((error) => {
+         console.log(error);
+      })
    }
 
    const submitForm = () => {
-      const formElements = form.querySelectorAll('input');
+      const formElements = form.querySelectorAll('input[type=text]');
       const formData = new FormData(form);
       const formBody = {};
 
@@ -58,7 +63,11 @@ export const form = ({formId}) => {
          sendData(formBody)
              .then(data => {
                 responseSendData.style.display = "block";
-                text.textContent = "Форма успешно отправлена";
+                if(data) {
+                   text.textContent = "Форма успешно отправлена";
+                } else {
+                   text.textContent = "Произошла ошибка, данные формы не отправлены";
+                }
                 overlay.style.display = "block";
 
                 formElements.forEach(input => {
@@ -76,25 +85,15 @@ export const form = ({formId}) => {
                    responseSendData.style.display = "none";
                    overlay.style.display = "none";
                 })
-
              })
              .catch(error => {
-                console.log('error')
-                /*responseSendData.style.display = "block";
-                text.textContent = "Ошибка отправки";
-                overlay.style.display = "block";
-
-                close.addEventListener('click', (e) => {
-                   e.preventDefault();
-                   responseSendData.style.display = "none";
-                   overlay.style.display = "none";
-                })*/
+                console.log(error)
              })
       } else {
          formElements.forEach(input => {
             input.value = '';
          })
-         alert('Данные не валидны!');
+         alert('Имя или телефон введены не верно!');
       }
 
 
