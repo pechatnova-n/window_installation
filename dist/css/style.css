@@ -213,6 +213,12 @@ input.error {
 #header .slogan {
   padding-top: 45px;
 }
+
+#header .row {
+  display: flex;
+  justify-content: space-between;
+}
+
 .phone {
   font-size: 24px;
   padding-top: 37px;
@@ -1623,8 +1629,8 @@ input.error {
 
 .header-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   font-size: 36px;
   cursor: pointer;
 }
@@ -1633,10 +1639,14 @@ input.error {
   color: rgba(0, 0, 0, 0.35);
 }
 
+.fancybox-inner {
+  border-radius: 10px;
+}
+
 .services-modal__close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 10px;
+  right: 10px;
   font-size: 36px;
   cursor: pointer;
 }
