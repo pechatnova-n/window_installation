@@ -4,6 +4,7 @@ import { sertificates } from "./modules/sertificates";
 import { timer } from "./modules/timer";
 import { form } from "./modules/form";
 import { validation } from "./modules/validation";
+import { calculator } from "./modules/calculator";
 
 
 
@@ -14,5 +15,5 @@ timer("01 april 2022");
 form({formId: "form1"});
 form({formId: "form2"});
 validation();
-
+calculator();
 
