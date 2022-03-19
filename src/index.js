@@ -1,12 +1,17 @@
-import { modal } from './modules/modal';
+import { modal } from "./modules/modal";
 import { servicesModal } from "./modules/servicesModal";
 import { sertificates } from "./modules/sertificates";
 import { timer } from "./modules/timer";
+import { form } from "./modules/form";
+import { validation } from "./modules/validation";
+
 
 
 modal();
 servicesModal();
 sertificates();
 timer("01 april 2022");
+form({formId: "form1"});
+validation();
 
 
