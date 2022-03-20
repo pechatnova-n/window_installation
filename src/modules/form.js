@@ -59,6 +59,8 @@ export const form = ({formId}) => {
          formBody[key] = val;
       })
 
+
+
       if (validate(formElements)) {
          sendData(formBody)
              .then(data => {
