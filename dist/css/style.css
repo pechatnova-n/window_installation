@@ -507,6 +507,8 @@ input.error {
 }
 .benefits-inner {
   text-align: center;
+  /*width: 576px;
+  overflow: hidden;*/
 }
 .benefit-image {
   margin-bottom: 22px;
@@ -1677,6 +1679,8 @@ input.error {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
+
+
 .benefits-wrap {
   display: flex;
   justify-content: space-between;
@@ -1761,7 +1765,6 @@ input.error {
 
 @media (min-width: 768px) {
   .benefits-wrap {
-    width: 100%;
-    max-width: 576px;
+    max-width: 576%;
   }
 }
