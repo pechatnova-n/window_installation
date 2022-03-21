@@ -1420,21 +1420,6 @@ span.sert-close{
     margin-left: 0;
     border-radius: 10px;
   }
-  .offer-heading {
-    width: 100%;
-    max-width: 100%;
-  }
-  .offer-utp {
-    width: 100%;
-  }
-  .bigSert{
-    width: 400px;
-    height: 500px;
-  }
-  span.sert-close{
-    top: -25px;
-    right: -30px;
-  }
 }
 
 @media (max-width: 580px) {
