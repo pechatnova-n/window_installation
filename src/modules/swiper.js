@@ -4,27 +4,27 @@ import { Autoplay, Navigation } from 'swiper';
 
 
 export const swiper = () => {
-    const swiper = new Swiper('.benefits-inner', {
+    const swiper = new Swiper('.benefits-body', {
         slidesPerView: 1,
-        //slidesPerGroup: 1,
+        slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
         modules: [Autoplay, Navigation],
-        /*autoplay: {
+        autoplay: {
             delay: 3500,
             disableOnInteraction: false,
-        },*/
+        },
         navigation: {
             nextEl: '.benefits__arrow--right',
             prevEl: '.benefits__arrow--left',
         },
-        /*breakpoints: {
+        breakpoints: {
             576: {
                 spaceBetween: 10,
                 slidesPerView: 3,
                 slidesPerGroup: 3,
             }
-        }*/
+        }
     });
 
     const swiper2 = new Swiper('.services-slider', {
