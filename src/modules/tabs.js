@@ -6,6 +6,7 @@ export const tabs = () => {
     const tabs = document.querySelectorAll('.tab-link');
 
     tabPanel.addEventListener('click', (e) => {
+        e.preventDefault();
         if (e.target.closest('.tab-link')) {
             const tabBtn = e.target.closest('.tab-link')
 

@@ -372,13 +372,13 @@ input.error {
 
 
 
-.offer.okna{
+.offer.windows{
   background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;
 }
-.offer.balkony{
+.offer.balcony{
   background: url("../images/offer-bg.jpg") no-repeat 50% 50%;
 }
-.offer.kuhni{
+.offer.kitchens{
   background: url("../images/offer3-bg.jpg") no-repeat 50% 50%;
 }
 
@@ -1411,6 +1411,32 @@ span.sert-close{
     max-width: 75%;
   }
 }
+
+@media (max-width: 1200px) {
+  .service-image {
+    display: none;
+  }
+  .service-text {
+    margin-left: 0;
+    border-radius: 10px;
+  }
+  .offer-heading {
+    width: 100%;
+    max-width: 100%;
+  }
+  .offer-utp {
+    width: 100%;
+  }
+  .bigSert{
+    width: 400px;
+    height: 500px;
+  }
+  span.sert-close{
+    top: -25px;
+    right: -30px;
+  }
+}
+
 @media (max-width: 580px) {
   .service-image {
     display: none;
@@ -1593,22 +1619,22 @@ input.error {
   opacity: 1;
 }
 
-.balkony .offer {
+.balcony .offer {
   background: url(../images/offer-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
-.balkony .order {
+.balcony .order {
   background: url(../images/order-bg.jpg) no-repeat center;
 }
 
-.kuhni .offer {
+.kitchens .offer {
   background: url(../images/offer3-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
-.kuhni .order {
+.kitchens .order {
   background: url(../images/order3-bg.jpg) no-repeat center;
 }
-.kuhni #order_2.order {
+.kitchens #order_2.order {
   background: url(../images/order3-2-bg.jpg) no-repeat center;
 }
 

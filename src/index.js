@@ -17,8 +17,20 @@ modal();
 servicesModal();
 sertificates();
 timer("01 april 2022");
-form({formId: "form1"});
-form({formId: "form2"});
+form({formId: "form1",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
+form({formId: "form2",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
 validation();
 calculator();
 swiper();

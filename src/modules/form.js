@@ -1,6 +1,6 @@
 'use strict';
 
-export const form = ({formId}) => {
+export const form = ({formId, someElement = []}) => {
    const form = document.getElementById(formId);
    const responseSendData = document.getElementById('responseMessage');
    const overlay = document.querySelector('.overlay');
@@ -59,6 +59,11 @@ export const form = ({formId}) => {
          formBody[key] = val;
       })
 
+
+      someElement.forEach(elem => {
+         const element = document.getElementById(elem.id);
+         formBody[elem.id] = element.value;
+      })
 
 
       if (validate(formElements)) {
