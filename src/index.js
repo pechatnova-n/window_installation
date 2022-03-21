@@ -7,6 +7,7 @@ import { validation } from "./modules/validation";
 import { calculator } from "./modules/calculator";
 import { swiper } from "./modules/swiper";
 import { slider } from "./modules/slider";
+import {scroll} from "./modules/scroll";
 
 
 
@@ -21,3 +22,4 @@ validation();
 //calculator();
 swiper();
 slider();
+scroll();
