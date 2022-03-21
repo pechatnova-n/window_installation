@@ -7,7 +7,8 @@ import { validation } from "./modules/validation";
 import { calculator } from "./modules/calculator";
 import { swiper } from "./modules/swiper";
 import { slider } from "./modules/slider";
-import {scroll} from "./modules/scroll";
+import { scroll } from "./modules/scroll";
+import { tabs } from "./modules/tabs";
 
 
 
@@ -19,7 +20,8 @@ timer("01 april 2022");
 form({formId: "form1"});
 form({formId: "form2"});
 validation();
-//calculator();
+calculator();
 swiper();
 slider();
 scroll();
+tabs();

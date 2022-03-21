@@ -363,12 +363,34 @@ input.error {
 #menu li a:hover .menu-cupboard {
   background-position: -80px 0px;
 }
-#offer {
-  background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;
+.offer {
+  /*background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;*/
   position: relative;
   background-size: cover;
 }
-#offer:after {
+
+
+
+
+.offer.okna{
+  background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;
+}
+.offer.balkony{
+  background: url("../images/offer-bg.jpg") no-repeat 50% 50%;
+}
+.offer.kuhni{
+  background: url("../images/offer3-bg.jpg") no-repeat 50% 50%;
+}
+
+.tabs .tab{
+  display: none;
+}
+.tabs .tab.active {
+  display: block;
+}
+
+
+.offer:after {
   position: absolute;
   z-index: 10;
   bottom: 0px;
@@ -379,7 +401,7 @@ input.error {
   background-color: #f2f2f2;
   background-color: rgba(0, 0, 0, 0.1);
 }
-#offer .container {
+.offer .container {
   height: 700px;
 }
 .offer-inner {
@@ -1161,27 +1183,27 @@ span.sert-close{
   margin-top: 30px;
 }
 @media (max-width: 1850px) {
-  #offer .container {
+  .offer .container {
     height: 650px;
   }
 }
 @media (max-width: 1750px) {
-  #offer .container {
+  .offer .container {
     height: 600px;
   }
 }
 @media (max-width: 1600px) {
-  #offer .container {
+  .offer .container {
     height: 550px;
   }
 }
 @media (max-width: 1450px) {
-  #offer .container {
+  .offer .container {
     height: 500px;
   }
 }
 @media (max-width: 1350px) {
-  #offer .container {
+  .offer .container {
     height: 450px;
   }
   .offer-heading h1 {
@@ -1198,7 +1220,7 @@ span.sert-close{
   }
 }
 @media (max-width: 1150px) {
-  #offer .container {
+  .offer .container {
     height: 400px;
   }
   .offer-heading h1 {
@@ -1461,7 +1483,7 @@ span.sert-close{
     font-size: 14px;
     height: 35px;
   }
-  #offer .container {
+  .offer .container {
     height: 500px;
   }
   .employee-inner h3 {
@@ -1571,7 +1593,7 @@ input.error {
   opacity: 1;
 }
 
-.balkony #offer {
+.balkony .offer {
   background: url(../images/offer-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
@@ -1579,7 +1601,7 @@ input.error {
   background: url(../images/order-bg.jpg) no-repeat center;
 }
 
-.kuhni #offer {
+.kuhni .offer {
   background: url(../images/offer3-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
@@ -1590,7 +1612,7 @@ input.error {
   background: url(../images/order3-2-bg.jpg) no-repeat center;
 }
 
-.dvery #offer {
+.dvery .offer {
   background: url(../images/offer4-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
@@ -1598,7 +1620,7 @@ input.error {
   background: url(../images/order4-bg.jpg) no-repeat center;
 }
 
-.potolki #offer {
+.potolki .offer {
   background: url(../images/offer5-bg.jpg) no-repeat 50% 50%;
   background-size: cover;
 }
