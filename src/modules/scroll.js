@@ -16,12 +16,16 @@ export const scroll = () => {
     }
 
     function moveToTop() {
+        let interval;
         if (window.pageYOffset > 0) {
             window.scrollBy(0, -50);
-            setTimeout(moveToTop, 0);
+            interval = setTimeout(moveToTop, 0.01);
+        } else {
+            clearTimeout(interval);
         }
     }
 
     window.addEventListener('scroll', trackScroll);
     scrollBtn.addEventListener('click', moveToTop);
 }
+
