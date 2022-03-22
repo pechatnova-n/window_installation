@@ -4,6 +4,10 @@ export const modal = () => {
     const overlay = document.querySelector('.overlay');
     const modalClose = document.querySelector('.header-modal__close');
 
+    const hide = () => {
+        headerModal.style.display = "none";
+        overlay.style.display = "none";
+    }
 
     call.addEventListener('click', e => {
             e.preventDefault();
@@ -13,15 +17,9 @@ export const modal = () => {
         })
 
 
-    modalClose.addEventListener('click', () => {
-        headerModal.style.display = "none";
-        overlay.style.display = "none";
-    })
+    modalClose.addEventListener('click', () => hide());
 
-    overlay.addEventListener('click', () => {
-        headerModal.style.display = "none";
-        overlay.style.display = "none";
-    })
+    overlay.addEventListener('click', () => hide());
 
 
 

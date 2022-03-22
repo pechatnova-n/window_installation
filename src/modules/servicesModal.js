@@ -4,7 +4,10 @@ export const servicesModal = () => {
     const overlay = document.querySelector('.overlay');
     const servicesModalClose = document.querySelector('.services-modal__close');
 
-
+    const hide = () => {
+        servicesModal.style.display = "none";
+        overlay.style.display = "none";
+    }
 
     modalCall.forEach(item => {
         item.addEventListener('click', (e) => {
@@ -17,14 +20,8 @@ export const servicesModal = () => {
         })
     })
 
-    servicesModalClose.addEventListener('click', () => {
-        servicesModal.style.display = 'none';
-        overlay.style.display = 'none';
-    })
+    servicesModalClose.addEventListener('click', () => hide());
 
-    overlay.addEventListener('click', () => {
-        servicesModal.style.display = "none";
-        overlay.style.display = "none";
-    })
+    overlay.addEventListener('click', () => hide());
 
 }

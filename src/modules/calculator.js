@@ -7,8 +7,6 @@ export const calculator = () => {
     const area = document.getElementById('calc-input');
     const calcTotal = document.getElementById('calc-total');
 
-
-
     const calculate = () => {
         const typeValue = +type.options[type.selectedIndex].value;
         const typeMaterialValue = +typeMaterial.options[typeMaterial.selectedIndex].value;
@@ -29,7 +27,6 @@ export const calculator = () => {
 
     calcBlock.addEventListener('input', (e) => {
         if(e.target === type || e.target === typeMaterial || e.target === area) {
-
             calculate()
         }
     })
