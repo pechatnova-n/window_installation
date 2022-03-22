@@ -528,9 +528,9 @@ input.error {
   background-color: #f5f6f6;
 }
 .benefits-inner {
-
-  /*width: 576px;
-  overflow: hidden;*/
+  width: 576px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .benefit-image {
   margin-bottom: 22px;
@@ -1429,6 +1429,9 @@ span.sert-close{
 }
 
 @media (max-width: 580px) {
+  .benefits-inner {
+    width: 100%;
+  }
   .service-image {
     display: none;
   }
