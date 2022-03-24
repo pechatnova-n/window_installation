@@ -4,6 +4,8 @@ export const form = ({formId, someElement = []}) => {
    const form = document.getElementById(formId);
    const responseSendData = document.getElementById('responseMessage');
    const overlay = document.querySelector('.overlay');
+   const headerModal = document.querySelector('.header-modal');
+   const servicesModal = document.querySelector('.services-modal');
 
    const text = document.querySelector('#responseMessage .box-modal_title>h2');
    const close = document.querySelector('#responseMessage .box-modal_body>a.fancyClose');
@@ -49,6 +51,7 @@ export const form = ({formId, someElement = []}) => {
          console.log(error);
       })
    }
+
 
    const submitForm = () => {
       const formElements = form.querySelectorAll('input[type=text]');
@@ -103,6 +106,13 @@ export const form = ({formId, someElement = []}) => {
          alert('Имя или телефон введены не верно!');
       }
 
+      if(formId === 'application-form' || formId === 'application-form2') {
+         servicesModal.style.display = "none";
+         overlay.style.display = "none";
+      } else if(formId === 'callback-form' || formId === 'callback-form2') {
+         headerModal.style.display = "none";
+         overlay.style.display = "none";
+      }
 
    }
 
@@ -115,6 +125,7 @@ export const form = ({formId, someElement = []}) => {
          e.preventDefault();
 
          submitForm();
+
 
       })
    } catch (error) {

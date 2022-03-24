@@ -30,6 +30,34 @@ form({formId: "form2",
 
         }
     ]});
+form({formId: "callback-form",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
+form({formId: "callback-form2",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
+form({formId: "application-form",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
+form({formId: "application-form2",
+    someElement: [
+        {
+            id: 'calc-total'
+
+        }
+    ]});
 validation();
 calculator();
 swiper();

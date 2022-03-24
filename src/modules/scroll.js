@@ -16,13 +16,10 @@ export const scroll = () => {
     }
 
     function moveToTop() {
-        let interval;
-        if (window.pageYOffset > 0) {
-            window.scrollBy(0, -50);
-            interval = setTimeout(moveToTop, 0.01);
-        } else {
-            clearTimeout(interval);
-        }
+        document.querySelector("body").scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 
     window.addEventListener('scroll', trackScroll);
