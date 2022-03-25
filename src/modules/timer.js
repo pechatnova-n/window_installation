@@ -19,9 +19,8 @@ export const timer = (deadline) => {
         return { timeRemaining, days, hours, minutes, seconds }
     }
 
+    let time = getTime();
     const updateTime = () => {
-        let time = getTime();
-
         if(time.timeRemaining <= 0) {
             timerDays.forEach(day => day.textContent = '00');
             timerHours.forEach(hour => hour.textContent = '00');
@@ -33,14 +32,13 @@ export const timer = (deadline) => {
             timerMinutes.forEach(minute => minute.textContent = addZerro(time.minutes));
             timersSeconds.forEach(second => second.textContent = addZerro(time.seconds));
         }
-
-        setInterval(function () {
-            if(time.timeRemaining > 0) {
-                updateTime();
-            }
-        }, 1000);
-
     }
+    setInterval(function () {
+        if(time.timeRemaining > 0) {
+            updateTime();
+        }
+    }, 1000);
+
 
     const addZerro = (num) => (num < 10)  ? '0' + num : num;
     updateTime();

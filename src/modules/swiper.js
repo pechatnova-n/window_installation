@@ -1,7 +1,7 @@
 'use strict';
+
 import Swiper from 'swiper';
 import { Autoplay, Navigation } from 'swiper';
-
 
 export const swiper = () => {
     const swiper = new Swiper('.benefits-body', {
@@ -26,7 +26,6 @@ export const swiper = () => {
             }
         }
     });
-
     const swiper2 = new Swiper('.services-slider', {
         slidesPerView: 1,
         slidesPerGroup: 1,

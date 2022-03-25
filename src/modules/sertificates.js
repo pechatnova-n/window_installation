@@ -5,11 +5,8 @@ export const sertificates = () => {
     const overlay = document.querySelector('.overlay');
     const clientHeight = document.documentElement.clientHeight;
 
-
-
     sertificateDocument.addEventListener('click', (e) => {
         e.preventDefault();
-
 
         let sert =  e.target.closest('.sertificate-document');
 
@@ -31,7 +28,6 @@ export const sertificates = () => {
         let width = (clientHeight / 3) * 2;
         el.style.height = `${height}px`;
         el.style.width = `${width}px`;
-        console.log(el.style.height)
 
         overlay.style.display = 'block';
         document.body.prepend(el);
