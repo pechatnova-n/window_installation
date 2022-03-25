@@ -95,6 +95,14 @@ export const form = ({formId, someElement = []}) => {
                    responseSendData.style.display = "none";
                    overlay.style.display = "none";
                 })
+
+                if(formId === 'application-form' || formId === 'application-form2') {
+                   servicesModal.style.display = "none";
+                   overlay.style.display = "none";
+                } else if(formId === 'callback-form' || formId === 'callback-form2') {
+                   headerModal.style.display = "none";
+                   overlay.style.display = "none";
+                }
              })
              .catch(error => {
                 console.log(error)
@@ -106,13 +114,7 @@ export const form = ({formId, someElement = []}) => {
          alert('Имя или телефон введены не верно!');
       }
 
-      if(formId === 'application-form' || formId === 'application-form2') {
-         servicesModal.style.display = "none";
-         overlay.style.display = "none";
-      } else if(formId === 'callback-form' || formId === 'callback-form2') {
-         headerModal.style.display = "none";
-         overlay.style.display = "none";
-      }
+
 
    }
 
