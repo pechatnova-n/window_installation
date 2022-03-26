@@ -8,6 +8,7 @@ import { calculator } from "./modules/calculator";
 import { swiper } from "./modules/swiper";
 import { scroll } from "./modules/scroll";
 import { tabs } from "./modules/tabs";
+import { burger } from "./modules/burger";
 
 
 
@@ -63,3 +64,4 @@ calculator();
 swiper();
 scroll();
 tabs();
+burger();
