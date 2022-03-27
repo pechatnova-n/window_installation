@@ -8,26 +8,29 @@ export const burger = () => {
         const navigationFixed = document.querySelector('#navigation-fixed');
         const navbarCollapseFixed = document.querySelector('#navbar-collapse-fixed');
 
-            navbarToggle[1].addEventListener('click', () => {
-                navigationFixed.style.margin = '0';
-                navigationFixed.style.display = 'block';
-                navbarCollapseFixed.style.display = 'block';
-                navbarCollapseFixed.querySelector('.navbar-order').style.display = 'block';
-            })
+        console.log(navbarToggle)
 
-        navbarToggle[0].addEventListener('click', () => {
+        const showFixMenu = () => {
+            navigationFixed.style.margin = '0';
+            navigationFixed.style.display = 'block';
+            navbarCollapseFixed.style.display = 'block';
+            navbarCollapseFixed.querySelector('.navbar-order').style.display = 'block';
+        }
+
+        const hideFixMenu = () => {
             navigationFixed.style.margin = '-60';
             navigationFixed.style.display = 'none';
             navbarCollapseFixed.style.display = 'none';
             navbarCollapseFixed.querySelector('.navbar-order').style.display = 'none';
-        })
+        }
+
+        navbarToggle[1].addEventListener('click', () => showFixMenu());
+
+        navbarToggle[0].addEventListener('click', () => hideFixMenu());
 
         burgerMenuLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                navigationFixed.style.margin = '-60';
-                navigationFixed.style.display = 'none';
-                navbarCollapseFixed.style.display = 'none';
-                navbarCollapseFixed.querySelector('.navbar-order').style.display = 'none';
+                hideFixMenu();
             })
         })
     }
